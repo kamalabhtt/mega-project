@@ -1,0 +1,167 @@
+/* 
+Reset Styles
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End reset styles */
+
+/* now we use our normal styles */
+:root {
+    --primary-darker: #0B1F5C;
+    --primary-dark: #1B327A;
+    --primary: #2B479E;
+    --primary-light: #4061C7;
+    --primary-lighter: #A2B8FC;
+
+    --secondary-darker: #B28E01;
+    --secondary-dark: #D2AB15;
+    --secondary: #FFD530;
+    --secondary-light: #FFE373;
+    --secondary-lighter: #FFEFAE;
+
+    --black: #222222;
+    --black-light: #454545;
+
+    --gray: #B1B1B1;
+    --gray-light: #DDDDDD;
+
+    --info: #1BB1E7;
+    --success: #439D3B;
+    --danger: #CD0E02;
+    --warning: #EB9100;
+    
+}
+
+
+body { 
+    font-family: "Archivo", sans-serif;
+    font-weight: 400; 
+
+}
+strong {
+    font-weight: bold;
+}
+p { 
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.font-61, .font-49, .font-39, .font-31, .font-25, .font-20 {
+    font-family: "Archivo", sans-serif;
+    line-height: 1.3;
+} 
+.weight-400 {
+    font-weight: 400;
+}
+.weight-600 {
+    font-weight: 600;
+}
+h1, .font-61 {
+    font-size: 61px;
+}
+h2, .font-49 {
+    font-size: 49px;
+}
+h3, .font-39 {
+    font-size: 39px;
+}
+h4, .font-31 {
+    font-size: 31px;
+}
+h5, .font-25 {
+    font-size: 25px;
+}
+h6, .font-20 {
+    font-size: 20px;
+}
+.font-18 {
+    font-size: 18px;
+}
+.font-16 {
+    font-size: 16px;
+}
+.small {
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+
+/*** Pages CSS  ***/
+.site-header .container {
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header-right {
+    gap: 32px;
+}
+.call-us a {
+    color: var(--black);
+    gap: 10px;
+    text-decoration: none;
+}
+.call-us div {
+    flex-direction: column;
+}
+.live {
+
+}
