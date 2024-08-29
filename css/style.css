@@ -1,7 +1,9 @@
 /* 
 Reset Styles
 */
-
+*{
+    box-sizing:border-box;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -93,6 +95,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
 }
+a{
+    text-decoration: none;
+    color:var(--primary);
+
+}
+
+a:hover{
+    text-decoration: underline;
+    color:var(--primary);
+}
+
+img{
+    max-width: 100%;
+}
 .font-61, .font-49, .font-39, .font-31, .font-25, .font-20 {
     font-family: "Archivo", sans-serif;
     line-height: 1.3;
@@ -130,9 +146,24 @@ h6, .font-20 {
 .small {
     font-size: 14px;
 }
+.btn{
+    padding:0px 16px;
+    border-radius: 4px;
+    background-color:var(--secondary);
+    color:var(--black);
+    display: inline-block;
+    max-height: 48px;
+    line-height: 48px;
+    font-size:18px;
+}
+
+.btn :hover{
+    background-color: var(--secondary-dark);
+    text-decoration: none;
+}
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 }
 .d-flex {
@@ -144,13 +175,55 @@ h6, .font-20 {
 .flex-column {
     flex-direction: column;
 }
+.align-center{
+    align-items: center;
+}
+.column-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.col-1{
+
+    width: calc(25% - (90px / 4))
+}
 
 
-/*** Pages CSS  ***/
+/*** header CSS  ***/
+
+.site-header {
+    padding: 12px 0;
+}
 .site-header .container {
     justify-content: space-between;
     align-items: center;
 }
+
+
+.logo{
+    height: 85px;
+}
+
+.menu-toggle{
+    background-color: transparent;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border: none;
+    display: none;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: #454545;
+    margin: 4px 0;
+    display: block;
+}
+
+
+
 .site-header-right {
     gap: 32px;
 }
@@ -162,6 +235,237 @@ h6, .font-20 {
 .call-us div {
     flex-direction: column;
 }
-.live {
+.live a{
+    color: var(--black);
+    border:1px solid var(--primary);
+    border-radius: 6px;
+    padding:7px 16px;
 
+
+}
+.live a :hover{
+    background-color: var(--primary-lighter);
+    text-decoration: none;
+}
+
+
+.live a span:before{
+    content:"";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius: 10px;
+    background-color: var(--success);
+    margin-right: 6px;
+
+}
+
+/*** header nav CSS  ***/
+
+/*** primary navigation css  ***/
+.site-navigation{
+    background-color: var(--primary);
+
+}
+.site-navigation ul{
+    list-style: none;
+    display: flex;
+}
+.site-navigation ul li a{
+
+    display: inline-block;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 16px;
+    
+
+}
+.site-navigation  ul li a:hover{
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--black);
+    
+}
+.home-hero-banner{
+    min-height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+
+
+}
+.home-hero-banner:before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: regba(0, 0, 0, 0.5);
+
+    position: absolute; /*position absolute garnu xa bhane parent lai relative garnu parxa jahile ni*/
+
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.hero-content{
+    color: #ffffff;
+    max-width: 480px;
+    gap: 24px;
+
+}
+
+.hero-content span{
+                
+    font-size: 25px;
+    font-weight: 700;
+}
+.hero-heading{
+    gap: 12px;
+}
+.fact{
+    padding: 24px;
+}
+.fact strong, .fact span {
+    display: block;
+    text-align: center;
+    padding: 0 32px;
+}
+.fact strong {
+    font-size: 49px;
+}
+
+.fact span{
+    font-size: 20px;
+    margin-top: 12px;
+    line-height: 1.3;
+
+}
+
+
+
+/*desttop lai  main manera garyo bhane max-with garne mobile lai main garera gare ko xa nbhane min-width garne  ahile phone haru 300px bhnanda sano hudaina teti matra rakhne*/
+
+@media(max-width :767px){ /* 767 px bhane kop chai ya samma matra hunxa 0 dekhi */ 
+    
+    .container {
+        width: 100%;
+        padding: 0 32px;
+        
+    }
+
+    .site-header-right{
+        margin-top: 16px;
+        gap: 10px;
+        width: 100%;
+        position: fixed;
+        bottom:0;
+        left: 0;
+        background-color:#ffffff;
+        z-index: 999;
+        padding: 8px  16px;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+    .call-us .call-us-info{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    #siteNavigation {
+        display: none;
+        padding: 32px;
+    }
+    .site-navigation ul {
+        display: block;
+    }
+    .site-navigation ul li a {
+        display: block;
+        padding: 16px;
+    }
+    
+}
+
+/* course */
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+.course-col{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+
+}
+.span{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+.welcome{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.welcome-col{
+    text-align: justify;
+    flex-basis:48%;
+    padding: 30px 2px;
+}
+.welcome-col img{
+    width: 100%;
+    margin-right:-10px;
+    border-top-left-radius: 60%;
+}
+.welcome-col h1{
+    padding-top:0;
+}
+.welcome-col p{
+    padding: 15px 0 25px;
+    margin-left: 10px;
+}
+
+.red-btn {
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    background-color: transparent; /* Transparent background to start with */
+    padding: 10px 20px; /* Add padding for button size */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+.red-btn:hover {
+    background-color: var(--danger); /* Button background color on hover */
+    color: var(--primary-dark); /* Text color on hover */
+}
+
+.secondary-btn {
+    border: 1px solid var(--danger);
+    color: var(--gray-light);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--danger); /* Set the background color */
+}
+
+
+/* about us*/
+.about-us p{
+    margin-left: auto;
+    margin-right: 50%;
+    text-align: justify;
 }
